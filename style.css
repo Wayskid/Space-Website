@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    color: white;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    font-family: 'PT Mono', monospace;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 2rem;
+}
+
+.logo{
+    display: grid;
+    align-content: center;
+}
+
+nav img{
+    height: 60px;
+    width: auto;
+}
+
+.navLinks{
+    display: none;
+}
+
+.burger{
+    padding: 2rem;
+}
+
+
+.bar{
+    background-color: white;
+    height: 3px;
+    width: 23px;
+    margin-bottom: 4px;
+}
+
+section{
+    height: 100vh;
+}
+
+.firstSec{
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    align-content: center;
+}
+
+.firstBKG, .secondBKG, .thirdBKG, .fourthBKG{
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.leftSide{
+    display: grid;
+    /* gap: 1rem; */
+}
+
+.leftSide h1{
+    font-size: 4.5rem;
+}
+
+.leftSide p{
+    width: 95%;
+    line-height: 1.5em;
+}
+
+.explore{
+    background-color: white;
+    width: min-content;
+    margin: 3rem auto 0 auto;
+    padding: 5.5rem 3rem;
+    border-radius: 50%;
+    color: black;
+    font-size: 25px;
+}
+
+.secondSec{
+    display: grid;
+    grid-template-rows: 40% min-content;
+    text-align: center;
+    gap: 1rem;
+    align-content: center;
+}
+
+.ssLeftSide{
+    display: grid;
+    grid-template-rows: 4% 85%;
+    align-content: center;
+    gap: 0.5rem;
+}
+
+.marsPic{
+    width: 60%;
+    height: 100%;
+}
+
+
+.ssRightSide{
+    display: grid;
+    grid-template-rows: min-content;
+    align-content: center;
+}
+
+.destinationLinks{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.secondSec h1{
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.sizes{
+    display: grid;
+}
+
+.sizes p{
+    font-size: 0.7rem;
+}
+
+.distance, .tTime{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+.thirdSec{
+    display: grid;
+    text-align: center;
+    grid-template-rows: min-content 75%;
+    align-content: center;
+}
+
+.thirdSec h3{
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.tsRightSide{
+    display: grid;
+    grid-template-rows: 70% min-content;
+    justify-items: center;
+    align-content: center;
+    gap: 0.5rem;
+}
+
+.womanPic{
+    height: 100%;
+}
+
+.crewInfo{
+    display: grid;
+    justify-items: center;
+    gap: 0.1rem;
+    grid-template-rows: repeat(4, min-content);
+    align-content: center;
+}
+
+.imgPicker{
+    display: flex;
+    gap: 7px;
+    grid-row: 1;
+    margin-bottom: 0.6rem;
+}
+
+.picker{
+    background-color: grey;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    cursor: pointer;  
+}
+
+.picked{
+    background-color: white !important;
+}
+
+.fourthSec{
+    display: grid;
+    grid-template-rows: min-content 65%;
+    gap: 1rem;
+    align-content: center;
+}
+
+.launchHeader{
+    text-align: center;
+}
+
+.fsRightSide{
+    display: grid;
+    grid-template-rows: 40% min-content min-content;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.rocketPicWrap{
+    grid-row: 1;
+}
+
+.rocketPic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 65%;
+}
+
+.launchPicker{
+    display: flex;
+    gap: 2rem;
+    justify-self: center;
+}
+
+.lPick{
+    border: 1px solid grey;
+    padding: 0.7rem 1.1rem;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pickedWhite{
+    background-color: white;
+    color: black;
+}
+
+.launchV{
+    display: grid;
+    line-height: 1.5em;
+}
+
+.hideSection{
+    display: none;
+}
+
+
+@media(min-width: 630px){
+
+    nav{
+        height: min-content;
+    }
+
+    .logo{
+        align-self: center;
+    }
+
+    nav img{
+        height: 90px;
+        width: auto;
+    }
+
+    .navLinks{
+        display: grid;
+        grid-auto-flow: column;
+        background-color: rgba(132, 108, 108, 0.292);
+        gap: 1.2rem;
+        padding-inline: 2.5rem;
+    }
+
+    .navLinks>*{
+        /* padding: 100%; */
+        padding: 2rem 0;
+        border-bottom: 2px solid rgba(132, 108, 108, 0);
+        cursor: pointer;
+    }
+
+    .navLinks>*:hover, .active{
+        border-bottom: 3px solid white;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    .explore{
+        padding: 6rem 3.5rem;
+        margin-top: 9rem;
+    }
+
+    .firstSec{
+        gap: 0;
+    }
+
+    .leftSide, .ssLeftSide, .tsLeftSide, .fsLeftSide{
+        margin-top: 5rem;
+    }
+
+    .leftSide{
+        padding-inline: 10rem;
+        margin-top: 7.5rem;
+    }
+
+    .leftSide h1{
+        font-size: 100px;
+        font-weight: 400;
+    }
+
+    .secondSec{
+        gap: 1rem;
+        align-content: center;
+    }
+
+    .ssLeftSide{
+        gap: 1rem;
+    }
+
+    .ssRightSide{
+        justify-items: center;
+    }
+
+    .ssRightSide h1{
+        font-size: 90px;
+    }
+
+    .destinationLinks{
+        gap: 4rem;
+    }
+
+    .sizes{
+        gap: 1rem;
+    }
+
+    .thirdSec{
+        /* display: grid; */
+        /* text-align: center; */
+        grid-template-rows: min-content 65%;
+        /* align-content: center; */
+        gap: 2rem;
+    }
+
+    .tsRightSide{
+        grid-template-rows: min-content 60%;
+        gap: 2rem;
+    }
+
+    .tsLeftSide h3{
+        text-align: left;
+    }
+
+    .crewInfo p{
+        width: 60%;
+    }
+
+    .womanPicWrap{
+        grid-row: 2;
+    }
+
+    .imgPicker{
+        grid-row: auto;
+        margin-top: 2rem;
+    }
+
+    .picker{
+        background-color: grey;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;  
+    }
+
+    .fourthSec{
+        gap: 4rem;
+    }
+
+    .launchHeader{
+        text-align: left;
+    }
+
+    .fsRightSide{
+        gap: 3rem;
+    }
+
+    .launchV{
+        gap: 0.5rem;
+    }
+}
+
+@media(min-width: 1000px){
+
+    .navLinks{
+        padding-inline: 9rem;
+        gap: 2rem;
+    }
+
+    .navLinks>*{
+        padding: 2.5rem 0;
+    }
+
+    .firstSec{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-content: center;
+        text-align: left;
+    }
+
+    .leftSide{
+        padding: 0 0 0 5rem;
+    }
+
+    .leftSide p{
+        width: 80%;
+    }
+
+    .secondSec{
+        grid-template-rows: none;
+        grid-template-columns: 60% 40%;
+        gap: 0;
+    }
+
+    .ssLeftSide{
+        margin-top: 7rem;
+    }
+
+    .ssRightSide{
+        text-align: left;
+        justify-items: left;
+        gap: 1rem;
+    }
+
+    .destinationLinks{
+        gap: 2rem;
+    }
+
+    .marsPic{
+        width: 60%;
+    }
+
+    .sizes{
+        display: flex;
+        gap: 2rem;
+        margin-top: 5rem;
+    }
+
+    .thirdSec{
+        gap: 2rem;
+        /* padding: 4rem 0 4rem 8rem; */
+    }
+
+    .tsLeftSide{
+        padding-left: 5rem;
+    }
+
+    .tsRightSide{
+        display: grid;
+        grid-template-columns: 50% 40%;
+        align-items: center;
+        gap: 0;
+    }
+
+    .womanPicWrap{
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: -1;
+    }
+
+    .crewInfo{
+        grid-row-start: 1;
+        grid-row-end: -1;
+        justify-items: left;
+        text-align: left;
+        padding-left: 5rem;
+        line-height: 1.5rem;
+        gap: 1rem;
+    }
+
+    .crewInfo p{
+        width: 80%;
+        text-align: left;
+    }
+
+    .crewInfo h1, .launchV h1{
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .imgPicker{
+        margin-top: 8rem;
+    }
+
+    .fourthSec{
+        /* padding: 4rem 0 0 4rem; */
+    }
+
+    .fsLeftSide{
+        margin-left: 2rem;
+        margin-top: 8rem;
+    }
+
+    .fsRightSide{
+        grid-template-rows: repeat(1, 65%);
+        grid-template-columns: 5% 50% 45%;
+        gap: 1rem;
+    }
+
+    .rocketPicWrap{
+        grid-column: 3;
+    }
+
+    .rocketPic{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 65%;
+    }
+
+    .launchPicker{
+        flex-direction: column;
+        align-self: center;
+        margin-left: 2rem;
+    }
+
+    .launchV{
+        align-self: center;
+        padding-inline: 1rem;
+        text-align: left;
+        gap: 1rem;
+    }
+}
