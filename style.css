@@ -21,7 +21,6 @@ body{
     font-family: 'PT Mono', monospace;
 }
 
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -71,7 +70,6 @@ nav img{
     cursor: pointer;
 }
 
-
 .bar{
     background-color: white;
     height: 3px;
@@ -99,7 +97,6 @@ section{
 .firstSec{
     text-align: center;
     display: grid;
-    /* gap: 2rem; */
     align-content: center;
 }
 
@@ -117,7 +114,6 @@ section{
 
 .leftSide{
     display: grid;
-    /* gap: 1rem; */
     margin-top: 1rem;
 }
 
@@ -297,12 +293,9 @@ section{
     line-height: 1.5em;
 }
 
-.hideSection{
-    display: none;
-}
 
 
-@media(min-width: 630px){
+@media(min-width: 647px){
 
     nav{
         height: min-content;
@@ -333,7 +326,6 @@ section{
     }
 
     .navLinks>*{
-        /* padding: 100%; */
         padding: 2rem 0;
         border-bottom: 2px solid rgba(132, 108, 108, 0);
         cursor: pointer;
@@ -349,11 +341,6 @@ section{
 
     .burger{
         display: none;
-    }
-
-    .explore{
-        padding: 6rem 3.5rem;
-        margin-top: 9rem;
     }
 
     .firstSec{
@@ -372,6 +359,11 @@ section{
     .leftSide h1{
         font-size: 100px;
         font-weight: 400;
+    }
+    
+    .explore{
+        padding: 6rem 3.5rem;
+        margin-top: 9rem;
     }
 
     .secondSec{
@@ -400,10 +392,7 @@ section{
     }
 
     .thirdSec{
-        /* display: grid; */
-        /* text-align: center; */
         grid-template-rows: min-content 65%;
-        /* align-content: center; */
         gap: 2rem;
     }
 
@@ -512,7 +501,6 @@ section{
 
     .thirdSec{
         gap: 2rem;
-        /* padding: 4rem 0 4rem 8rem; */
     }
 
     .tsLeftSide{
@@ -554,10 +542,6 @@ section{
 
     .imgPicker{
         margin-top: 8rem;
-    }
-
-    .fourthSec{
-        /* padding: 4rem 0 0 4rem; */
     }
 
     .fsLeftSide{
