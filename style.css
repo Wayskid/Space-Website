@@ -44,11 +44,31 @@ nav img{
 }
 
 .navLinks{
-    display: none;
+    display: grid;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.977);
+    text-align: center;
+    gap: 1rem;
+    top: 75%;
+    width: 100%;
+    height: max-content;
+    padding-block: 1rem;
+    font-weight: 600;
+    clip-path: inset(0 0 100% 0);
+    transition: 0.8s ease;
+}
+
+.navLinks.showNavLinks{
+    clip-path: inset(0 0 0 0);
+}
+
+.navLinks>*:hover{
+    transform: scale(1.1);
 }
 
 .burger{
     padding: 2rem;
+    cursor: pointer;
 }
 
 
@@ -57,6 +77,19 @@ nav img{
     height: 3px;
     width: 23px;
     margin-bottom: 4px;
+    transition: 0.8s ease;
+}
+
+.bar:nth-child(1).cross{
+    transform: rotate(45deg);
+}
+
+.bar:nth-child(2).cross{
+    opacity: 0;
+}
+
+.bar:nth-child(3).cross{
+    transform: rotate(-45deg) translate(10px, -10px);
 }
 
 section{
@@ -66,8 +99,12 @@ section{
 .firstSec{
     text-align: center;
     display: grid;
-    gap: 2rem;
+    /* gap: 2rem; */
     align-content: center;
+}
+
+.leftSide, .ssLeftSide, .tsLeftSide, .fsLeftSide{
+    margin-top: 2.5rem;
 }
 
 .firstBKG, .secondBKG, .thirdBKG, .fourthBKG{
@@ -81,6 +118,7 @@ section{
 .leftSide{
     display: grid;
     /* gap: 1rem; */
+    margin-top: 1rem;
 }
 
 .leftSide h1{
@@ -285,6 +323,13 @@ section{
         background-color: rgba(132, 108, 108, 0.292);
         gap: 1.2rem;
         padding-inline: 2.5rem;
+        position: unset;
+        text-align: unset;
+        padding-block: 0;
+        width: unset;
+        height: unset;
+        font-weight: unset;
+        clip-path: inset(0 0 0 0);
     }
 
     .navLinks>*{
@@ -292,6 +337,10 @@ section{
         padding: 2rem 0;
         border-bottom: 2px solid rgba(132, 108, 108, 0);
         cursor: pointer;
+    }
+
+    .navLinks>*:hover{
+        transform: scale(1);
     }
 
     .navLinks>*:hover, .active{
